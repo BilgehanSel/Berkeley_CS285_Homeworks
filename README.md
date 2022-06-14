@@ -2,9 +2,10 @@
 
 # Setup
 This fork is intented to be run from a linux environment or in WSL2 (Windows Subsytem for Linux).
-1. Turn on Windows features Hyper-V, Virtual Machine Platform, Windows Hypervisor Platform, Windows Subsystem for Linux.
+1. Turn on Windows features Hyper-V, Virtual Machine Platform, Windows Hypervisor Platform, Windows Subsystem for Linux. If you are on Windows 10, you may need to register to be a developer. On Windows 11, there should not be a problem.
 2. Install Ubuntu (just Ubuntu, not Ubuntu-22.04 or something) from Windows Store.
-3. Install Mujoco 2.1.0
+3. Install `terminal` from Windows Store, it enables easy access to wsl environments by clicking the button next `+` sign in the tabs menu.
+4. Install Mujoco 2.1.0
     ```
     wget https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz
     tar -xvf mujoco210-linux-x86_64.tar.gz
@@ -12,7 +13,7 @@ This fork is intented to be run from a linux environment or in WSL2 (Windows Sub
     sudo cp mujoco210 ~/.mujoco/
     echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/darkness/.mujoco/mujoco210/bin' >> ~/.bashrc
     ```
-4. Install the requirements
+5. Install the requirements
     ```
     sudo apt install sudo apt-get install python3 python3-dev libosmesa6-dev patchelf
     pip3 install requirements.txt
@@ -20,7 +21,7 @@ This fork is intented to be run from a linux environment or in WSL2 (Windows Sub
     echo 'export PULSE_SERVER=tcp:$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}') #GWSL' >> ~/.bashrc
     echo 'export LIBGL_ALWAYS_INDIRECT=1 #GWSL' >> ~/.bashrc
     ```
-5. (Optional) Installing PyTorch with Nvidia GPU Support (Assumes you have a CUDA enabled GPU)
+6. (Optional) Installing PyTorch with Nvidia GPU Support (Assumes you have a CUDA enabled GPU)
     * Installing Cuda 11.7
     ```
     wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/cuda_11.7.0_515.43.04_linux.run
