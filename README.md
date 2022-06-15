@@ -12,7 +12,7 @@ This fork is intented to be run from a linux environment or in WSL2 (Windows Sub
     tar -xvf mujoco210-linux-x86_64.tar.gz
     mkdir ~/.mujoco
     sudo cp mujoco210 ~/.mujoco/
-    echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/darkness/.mujoco/mujoco210/bin' >> ~/.bashrc
+    echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/<user_name>/.mujoco/mujoco210/bin' >> ~/.bashrc
     ```
 6. Install the requirements
     ```
